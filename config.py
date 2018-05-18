@@ -18,3 +18,8 @@ class TestingConfig(Config):
 class DevelopmentConfig(Config):
     """Contains additional config variables required during development"""
     DEBUG = True
+
+
+class ProductionConfig(Config):
+    """Contains additional config variables required during production"""
+    DEBUG = False

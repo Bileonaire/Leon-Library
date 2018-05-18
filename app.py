@@ -19,7 +19,7 @@ def create_app(configuration):
 
     return app
 
-app = create_app('config.DevelopmentConfig')
+app = create_app('config.ProductionConfig')
 
 
 @app.route('/')
@@ -30,4 +30,4 @@ def hello_world():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run('', port=port)
+    app.run('0.0.0.0', port=port)
